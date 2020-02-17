@@ -1,5 +1,6 @@
-### luci-app-vssr
-a new SSR SS V2ray luci app bese luci-app-ssr-plus  
+## luci-app-vssr [Hello World]
+A new SSR SS V2ray Trojan luci app bese luci-app-ssr-plus  
+<b>支持V2ray分流</b>  
 目前只适配最新版 argon主题 （其他主题下应该也可以用 但显示应该不会很完美）  
 目前Lean最新版本的openwrt 已经可以直接拉取源码到package/lean 下直接进行勾选并编译，由于有部分文件和ssr+ 同文件名所以不能同时编译。  
 
@@ -12,11 +13,23 @@ a new SSR SS V2ray luci app bese luci-app-ssr-plus
 稳定性的差异来自于你固件的内核，还有ss ssr v2ray 这几个核心插件的稳定性，当然你的节点才是影响稳定性的最大因素。  
 Luci 能决定的只有操作起来是否便利、顺手，还有对几个核心应用功能的适配挖掘而已。
 
-### Update Log 2020-02-09
+### Update Log 2020-02-11
 
-1. 增加了V2ray简易分流模式，现在当你在使用v2ray作为主节点的时候，可以选择为几个主流的视频插件指定特定的节点来达到分流的目的。目前可以分流的视频有Youtube  一些台湾的视频平台 Netflix  Diseny+  Prime Video 
-1. 修改了订阅代码。  
-1. 修复一些节点列表的显示问题。  
+这是一个中期代码精简优化的版本，无新功能，如果当前使用无bug不建议更新。  
+
+#### Updates
+
+- UPD: 删除了一些不必要的文件。
+- UPD: 优化了部分前端模板的命名。
+- UPD: 优化了大部分的前端界面中的Javascript代码（未来还需要进一步的优化）。
+
+#### Bug fixes
+
+- FIX: 修复了Vmess链接导入时，前端js出错无法获得国家代码的Bug。
+- FIX: 修复了一些文字翻译的错误。
+
+
+详情见[具体日志](./relnotes.txt)。
 
 ### Intro
 
@@ -25,7 +38,7 @@ Luci 能决定的只有操作起来是否便利、顺手，还有对几个核心
 1. 优化了在节点列表页面点击应用后节点切换的速度。同时也优化了自动切换的速度。  
 1. 将节点订阅转移至 高级设置 请悉知 由于需要获取ip的国家code 新的订阅速度可能会比原来慢一点点 x86无影响。  
 1. 去掉了ss插件，ss节点将通过v2ray进行代理，支持ss的v2ray plugin，可能会遇到老的加密方式不兼容的情况。  
-1. 给Hello World 增加了IP状态显示，在页面底部 左边显示当前节点国旗 ip 和中文国家 右边 是四个网站的访问状态  可以访问是彩色 不能访问是灰色。  
+1. 给Hello World 增加了IP状态显示，在页面底部 左边显示当前节点国旗 ip 和中文国家 右边 是四个网站的访问状态  可以访问是彩色不能访问是灰色。  
 1. 优化了国旗匹配方法，在部分带有emoji counrty code的节点名称中 优先使用 emoji code 匹配国旗。  
 1. 建议搭配argon theme，能有最好的显示体验。  
 
